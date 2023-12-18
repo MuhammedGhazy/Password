@@ -21,19 +21,22 @@ int main ()
 
 		}
 		putchar('\n');
-		
-		/* printf("please wait...");
+
+       /* printf("please wait...");
 		for (i = 0; i < 15; i++)
 		{
-			putchar('#');
+			printf(".");
 			sleep(50);
 		} */
-		
+
 		for (i = 0; i < 5; i++)
 		{
 			if (pass_2[i] != pass[i])
+            {
+
 				passflag = 1;
-			break;
+                break;
+            }
 		}
 		if (1 == passflag)
 		{
@@ -42,12 +45,14 @@ int main ()
 			printf("Invalid Password\n");
 			printf("Please Enter The Right Password\n");
 		}
-		else 
+		else
 		{
 			printf("welcome\n");
-			break;
+            break;
 		}
+
 	}
+
 		return (0);
 }
 

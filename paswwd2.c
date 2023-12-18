@@ -10,14 +10,14 @@ int main ()
 	int triall = 0;
 
 	while ( triall < 3 )
-	{	
+	{
 
 		printf("Please Enter The Password ");
 			for (index = 0; index < 4; index++)
 			{
 				scanf("%c", &user_pass[index]);
 				fflush(stdin);
-			
+
 
 			}
 			putchar('\n');
@@ -25,8 +25,11 @@ int main ()
 			for (index = 0; index < 4; index++)
 			{
 				if ( user_pass[index] != pass[index])
-					passflag = 1 ;
-				break;
+                {
+
+                        passflag = 1 ;
+                        break;
+                }
 			}
 
 			if (1 == passflag)
@@ -36,11 +39,12 @@ int main ()
 				printf("Invalid Password \n");
 				printf("Please Enter Your Password \n");
 			}
-			else 
+			else
 			{
 				printf("Welcome..\n");
-				break;
+            break;
 			}
+
 	}
 	return (0);
 }
